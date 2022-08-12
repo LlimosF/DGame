@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+header {
+    padding: 24px;
+}
+
+.game-conteneur {
+    border: 10px solid rgb(107, 49, 15);
+    width: 150vh;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: [start] 1fr [middle] 1fr [end];
+    grid-template-rows: [start] 1fr [middle] 1fr [end];
+    margin-left: 10%;
+    text-transform: uppercase;
+}
+
+.playerOne {
+    grid-row: start / end;
+    grid-column: start / middle;
+    background-color: lightgray;
+}
+
+#p-1 {
+    text-align: center;
+    align-self: center;
+    font-weight: 400;
+    font-size: 300%;
+    margin-top: 120px;
+}
+
+#p-2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 300%;
+    margin-top: 120px;
+}
+
+.playerTwo {
+    grid-row: start / end;
+    grid-column: middle / end;
+    background-color: white;
+}
+
+.new-game {
+    grid-row: start / middle;
+    grid-column: start / end;
+    z-index: 1;
+    padding-top: 2%;
+    height: 100px;
+}
+
+h2 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.game-roll {
+    grid-row: middle / end;
+    grid-column: start / end;
+    margin: 0;
+    padding-top: 125px;
+}
+
+.game-hold {
+    grid-column: start / end;
+    grid-row: middle / end;
+    margin: 0;
+    margin-top: 185px;
+    height: 50px;
+}
+
+.current-one {
+    background-color:  rgb(221, 61, 61);
+    width: 150px;
+    height: 100px;
+    grid-column: start / middle;
+    grid-row: middle / end;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0px 0px 2px black;
+}
+
+.current-two {
+    background-color: rgb(221, 61, 61);
+    width: 150px;
+    height: 100px;
+    grid-column: middle / end;
+    grid-row: middle / end;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0px 0px 2px  black;
+}
+
+.current-text {
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    margin: 0;
+    text-shadow: 1px 1px 5px black;
+}
+
+.current-score-p {
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    font-size: 200%;
+    margin-top: 0px;
+    text-shadow: 1px 1px 5px black;
+}
+
+.current-de {
+    width: 120px;
+    height: 120px;
+    grid-column: start / end;
+    grid-row: start / middle;
+    justify-self: center;
+    align-self: flex-end;
+    box-shadow: 0px 0px 10px black;
+    background: white;
+}
+
+svg {
+    color: red;
+}
+
+button {
+    background-color: lightgray;
+    border: none;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.score-player1 {
+    grid-column: start / middle;
+    grid-row: start / middle;
+    justify-self: center;
+    align-self: flex-end;
+    font-size: 90px;
+    color:  rgb(221, 61, 61);
+    font-weight: 300;
+}
+
+.score-player2 {
+    grid-column: middle / end;
+    grid-row: start / middle;
+    justify-self: center;
+    align-self: flex-end;
+    font-size: 90px;
+    color:  rgb(221, 61, 61);
+    font-weight: 300;
+}
+
+#winner {
+    color: red;
+    grid-row: start / middle;
+    grid-column: start / end;
+    z-index: 0;
+    align-self: center;
+    justify-self: center;
+    font-size: 35px;
+    font-weight: 500;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+span {
+    color: rgb(221, 61, 61);
+}
+
+.play {
+    color: rgb(221, 61, 61);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-height: 500px) {
+    .current-one {
+        background-color:  rgb(221, 61, 61);
+        width: 50px;
+        height: 50px;
+        grid-column: start / middle;
+        grid-row: middle / end;
+        align-self: center;
+        justify-self: center;
+        box-shadow: 0px 0px 2px black;
+    }
+    
+    .current-two {
+        background-color: rgb(221, 61, 61);
+        width: 50px;
+        height: 50px;
+        grid-column: middle / end;
+        grid-row: middle / end;
+        align-self: center;
+        justify-self: center;
+        box-shadow: 0px 0px 2px  black;
+    }
+    
+    .current-text {
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+        margin: 0;
+        text-shadow: 1px 1px 5px black;
+        font-size: 10px;
+    }
+
+    .current-score-p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 1px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .p-2.play {
+        font-size: 10px;
+    }
+
+    h3#p-1 {
+        font-size: 30px;
+    }
+    
+    h3#p-2 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: px;
+    }
+}
