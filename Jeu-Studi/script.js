@@ -175,8 +175,7 @@ function changePlayer (notFalse) {
             player1 = 0;
             document.getElementById('currentP1').innerHTML = player1;
             } else {
-                document.getElementById('winner').innerHTML = 'PLAYER 1 WIN THIS GAME !';
- 
+                 console.log('Waiting a winner');
         }
     } else {
         if (totalP2 < 100) {
@@ -193,9 +192,7 @@ function changePlayer (notFalse) {
             player2 = 0;
             document.getElementById('currentP2').innerHTML = player2;
         } else {
-            document.getElementById('winner').innerHTML = 'PLAYER 2 WIN THIS GAME !';
-        
-
+             console.log('Waiting a winner');
         }
     }
 }  
