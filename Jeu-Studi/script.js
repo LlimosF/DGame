@@ -200,12 +200,12 @@ function changePlayer (notFalse) {
     }
 }  
 
-// ?????
+// ATTRIBUTION EVENTS
 
 let change = document.getElementById('hold');
 change.addEventListener("click", changePlayer, null);
 
-let game = document.getElementById('ntm');
+let game = document.getElementById('game-start');
 game.addEventListener("click", gameNew, null);
 
 // NOUVELLE PARTIE
